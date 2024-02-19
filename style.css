@@ -46,7 +46,13 @@ span {
     margin-left: 20px;
     }
 
-#nav-secciones {
+#contenedor-hamburguesa {
+    width: 20%;
+    max-width: 70px;
+    align-self: center;
+}    
+
+#nav-ul {
     margin: 0px;
     padding:0px;
     cursor: pointer;
@@ -77,8 +83,8 @@ span {
     position:fixed;
     right: 7%;
     bottom: 10%;
-}
-    
+    }
+        
 #button-wp {
     cursor: pointer;
     height: 100%;
@@ -87,7 +93,7 @@ span {
     padding: 0px;
     margin: 0px;
     border-radius: 11px;
-  }
+      }    
 
 #contenedortítulobotones {
     color: rgb(61, 61, 61);
@@ -126,7 +132,7 @@ h2 {
     align-items: center;
     }
 
-#Download, #More-info {
+button {
     cursor: pointer;
     height: 80px;
     width: 350px;
@@ -251,97 +257,111 @@ h4 {
     }
 
 
+/*Breakpoint de desktop */
+@media (min-width: 769px) {
+    #contenedor-hamburguesa {
+        display: none;
+    }
+}
 
- /* Breakpoint de tablet */
- @media (max-width: 768px){
+/* Breakpoint de tablet */
+@media (max-width: 768px) {
+    #contenedortítulobotones {
+        display:flex;
+    }
     #contenedor-wp {
-        width: 8%;
-        height: 8%;
-        bottom: 6%;
-        right: 10%;
+        width: 60px;
     }    
+    #contenedor-hamburguesa {
+        display: static;
+    }  
+    #nav-ul {
+        display: none;
+    }
     h1, h2 {
         font-size: 35px;
     }
-    #Download, #More-info {
-        width: 200px;
-        height: 70px;
+    button {
+        width: 150px;
+        height: 60px;
         font-size: 25px;
     }
     #contenedor-paneles {
         flex-direction: column;
         align-items: center;
     }
-}
+}        
 
 /* Breakpoint de mobile grande */
 @media (max-width: 450px){
     body{
-       padding-top: 1px;
+        padding-top: 1px;
     }
-    #contenedor-wp {
-        width: 10%;
-        height: 10%;
-        }
-    h1 { 
-       width: 30%;    
-       font-size: 30px;
-    }
-    h2 { 
-       width: 30%;
-       font-size: 28px;
-    }
-    #Download, #More-info {
-       width: 150px;
-       height: 50px;
-       font-size: 25px;
-    }       
-    #contenedortítulobotones {
-       margin-top: 4%;
-       display: block;
-       width: 50%;
-       margin-left: 11%;        
-    }
-    #contenedor-paneles {
-       flex-direction: column;
-       align-items: center;
-    }
-    footer {
-       padding: 10%; 
-    }
-    h4  { 
-       font-size: 14px;
-    }
-    p {
-       font-size: 11px;
-       line-height: 0px;
-       letter-spacing: 0px;
-    }   
     header {
-       position: static;
-       margin-top: 3px;
-       width: 77%;
-       margin-left: 11%;
+        position: static;
+        margin-top: 3px;
+        width: 77%;
+        margin-left: 11%;
     }
-    nav {
-       display: block;
+    #contenedor-hamburguesa {
+        display: static;
+    }    
+    #icono-hamburguesa {
+        display: static;
+        width:70%;
     }
-    #logo {
-       justify-content: center;
-       font-size: 85%;
-    }
-    a{
-       font-size: 300%;
-    }
-    #nav-secciones {
-       justify-content: center;
+    #nav-ul {
+        display: none;
     }
     .nav-lista {
-       font-size: 80%;
-       margin: 4%;
+        font-size: 80%;
+        margin: 4%;
+    }   
+    h1 {      
+        width: 90%;
+        font-size: 30px;
+    }
+    h2 { 
+        width: 200px;
+        font-size: 28px;
+    }
+    button {
+        width: 120px;
+        height: 45px;
+        font-size: 20px;
+    }       
+    #contenedortítulobotones {
+        margin-top: 4%;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-left: 11%;        
+    }
+    #contenedor-wp {
+        width: 50px;
     }    
-}
+    #contenedor-paneles {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer {
+        padding: 10%; 
+    }
+    h4  { 
+        font-size: 14px;
+    }
+    p {
+        font-size: 11px;
+        line-height: 0px;
+        letter-spacing: 0px;
+    }   
+    #logo {
+        justify-content: center;
+        font-size: 85%;
+    }
+    a{
+        font-size: 300%;
+    }
+}    
 
 
-
-Falta iconitos -footer-
